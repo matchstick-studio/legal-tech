@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title>Delegate Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+  
+  <ion-avatar id="jj">
+    
+    <img src="{{ xx.imageurl }}">
+  </ion-avatar>
+
+
+
+
+
+
+  <div text-center padding>
+    <h2>{{ xx.firstName }} {{ xx.lastName }}</h2>
+  </div>
+
+
+  <div style="border-radius:10px;" class="transparent">
+
+    <ion-item style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Position</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" disabled="true" value="{{  xx.position }}" ></ion-input>
+    </ion-item>
+    
+    <ion-item style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Company</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.company }}" ></ion-input>
+    </ion-item>
+
+    <ion-item style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Gender</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.gender }}" ></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="xx.website" style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Website</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.website }}" ></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="xx.facebook" style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Facebook</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.facebook }}" ></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="xx.linkedin" style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Linkedin</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.linkedin }}" ></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="xx.twitter" style="background-color: transparent" no-lines>
+      <ion-label style="color:#adaaaa;width:25%;">Twitter</ion-label>
+      <ion-input style="color:black;font-size: 130%;"  type="text" [disabled]="true" value="{{  xx.twitter }}" ></ion-input>
+    </ion-item>
+    
+
+
+
+    <!-- <br> -->
+  
+      <!-- <button ion-button color="secondary" (click)="sendNotification(xx.id,xx.fcmtoken)">
+        Request Contact
+      </button> -->
+  
+  </div>
+
+
+</ion-content>

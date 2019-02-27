@@ -1,0 +1,98 @@
+<ion-header>
+	<ion-navbar text-center>
+		<ion-title >Sign Up</ion-title>
+		
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="transparent">
+
+
+	<ion-item style="background-color: transparent">
+		<!-- <button ion-button (click)="openImagePicker()">Select Photo</button> -->
+		 <ion-avatar id="jj" (click)="openImagePicker()">
+         <img [src]="imgurl">
+
+      </ion-avatar>
+	</ion-item>
+
+	<form (ngSubmit)="signup()" [formGroup]="form">
+		<ion-list inset>
+
+			<ion-item style="background-color: transparent">
+				<ion-input type="text" placeholder="Surname" formControlName="sname"></ion-input>
+			</ion-item>
+
+			<ion-item style="background-color: transparent">
+				<ion-input type="text" placeholder="Other Name" formControlName="oname"></ion-input>
+			</ion-item>
+
+
+
+			<!-- <ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Company" formControlName="company"></ion-input>
+			</ion-item>
+
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Position" formControlName="position"></ion-input>
+			</ion-item> -->
+
+		
+			<ion-list radio-group formControlName="gender">
+				<ion-row>
+				<ion-col col-6>
+				<ion-item style="background-color: transparent" no-lines  >
+				<ion-label>Male</ion-label>
+				<ion-radio value="male" ></ion-radio>
+				</ion-item>
+			</ion-col>
+				<ion-col col-6>
+				<ion-item style="background-color: transparent" no-lines >
+				<ion-label>Female</ion-label>
+				<ion-radio value="female" ></ion-radio>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+
+		
+			</ion-list>
+
+
+
+			
+
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+			</ion-item>
+
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+			</ion-item>
+
+			
+
+			<!-- <ion-item style="background-color: transparent" no-lines>
+				<ion-input type="tel" placeholder="Mobile Number" formControlName="phone"></ion-input>
+			</ion-item>
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Website" formControlName="website"></ion-input>
+			</ion-item>
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Facebook" formControlName="facebook"></ion-input>
+			</ion-item>
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Linkedin" formControlName="linkedin"></ion-input>
+			</ion-item>
+			<ion-item style="background-color: transparent" no-lines>
+				<ion-input type="text" placeholder="Twitter" formControlName="twitter"></ion-input>
+			</ion-item> -->
+			
+		</ion-list>
+
+		<div padding-horizontal>
+			<div class="form-error">{{signupError}}</div>
+
+			<button ion-button full type="submit" [disabled]="!form.valid">Sign up</button>
+		</div>
+	</form>
+</ion-content>

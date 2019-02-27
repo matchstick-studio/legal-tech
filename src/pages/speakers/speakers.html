@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title>Speakers</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  >
+
+
+      <ion-item no-lines class="transparent" *ngFor="let speaker of speakers | async; let i = index;"  [ngClass]="(i % 2 == 0) ? 'odd' : 'even'" (click)="openItem(speaker,'SpeakerDetailsPage')">
+          <ion-avatar item-start>
+            <img src="{{ speaker.imageurl }}">
+          </ion-avatar>
+          <h2>{{ speaker.name }}</h2>
+        <p>{{ speaker.info }}</p>
+        <p>{{ speaker.company }}</p>
+        </ion-item>
+
+
+</ion-content>

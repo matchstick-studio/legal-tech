@@ -1,0 +1,48 @@
+page-sponsor-details {
+
+    .item-profile {
+        width: 100%;
+      //  background-position: center center;
+        background-size: cover;
+        height: 250px;
+       
+      }
+
+      .bg{
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+      
+      }
+
+      #jj img{
+        height: 120px;
+      } 
+
+      #jj {
+        width: 40%;
+        margin-left:30%;
+        // height: 100px;
+      } 
+      #jj ion-text-avatar{
+        height: 120px;
+        width: 120px;
+        background-color: #00b7ff00;
+        font-size: 300%;
+      }
+
+      .transparent{
+        background-color: #00b7ff60;
+    }
+
+    .transparent2{
+        background-color: rgba(0, 37, 63,0.3);
+        color: white;
+    }
+
+    ion-title{
+      margin-right: 20%;
+  }
+
+
+}

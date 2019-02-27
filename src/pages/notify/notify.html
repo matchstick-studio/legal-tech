@@ -1,0 +1,70 @@
+
+
+
+<ion-content >
+
+  <!-- <ion-card class="transparent" *ngFor="let item of cardItems ; let i = index;" [ngClass]="'odd'">
+
+                    
+                
+    <ion-card-content>
+      <p>{{item.content}}</p>
+    </ion-card-content>
+
+    <ion-row>
+     
+      <ion-col center text-center>
+        <ion-note>
+          Tue 10th
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card> -->
+
+  <ion-card *ngFor="let s of schedule | async ;" class="transparent">
+
+
+
+      
+
+                    
+                
+    <ion-card-content text-center>
+      <p>{{s.name}}</p>
+    </ion-card-content>
+
+    <ion-row>
+     
+      <ion-col center text-center>
+        <ion-note>
+          <!-- {{ convertMillisecondsToDigitalClock(item.google.sent_time) }} -->
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card *ngFor="let item of thedata | async ;" class="transparent">
+
+
+
+      
+
+                    
+                
+    <ion-card-content text-center>
+      <p>{{item.body}}</p>
+    </ion-card-content>
+
+    <ion-row>
+     
+      <ion-col center text-center>
+        <ion-note>
+          <!-- {{ convertMillisecondsToDigitalClock(item.google.sent_time) }} -->
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
+
+

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the SchedulePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar text-center>
+      <button ion-button menuToggle start>
+          <ion-icon style="background-color:rgba(red, green, blue, 0.1)" name="menu"></ion-icon>
+        </button>
+    <ion-title >Agenda</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-item-divider text-center class="transparent2">5th March 2019</ion-item-divider>
+  <ion-item-group>
+
+
+    <ion-item no-lines *ngFor="let s of schedule | async ; let i = index;" class="transparent" [ngClass]="(i % 2 == 0) ? 'odd' : 'even'" (click)="openItem(s,'ScheduleDetailsPage')">
+
+      <h2 style="color:#00b7ff;font-size:150%;"><ion-icon name="time"></ion-icon> {{ s.time }}</h2>
+      <div >
+      <h2 style="padding-left:12%;">{{ s.title }}</h2>
+      <div style="padding-left:10%;" class="faces">
+        
+       
+       
+
+          <ion-avatar *ngFor="let ss of  generateArray(s.speakers)">
+              <img src="{{ ss.imageurl }}">
+          </ion-avatar>
+          
+        
+
+      </div>
+    </div>
+    </ion-item>
+
+  </ion-item-group>
+
+
+</ion-content>

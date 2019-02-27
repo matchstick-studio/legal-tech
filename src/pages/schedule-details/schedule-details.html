@@ -1,0 +1,53 @@
+
+<ion-header>
+
+  <ion-navbar  class="transparent">
+      <button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-center></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+    
+
+  <h1 style="color:#00b7ff;" text-center><ion-icon name="time"></ion-icon> {{ xx.time }}</h1>
+  <div text-center padding>
+  <h2>{{ xx.title }}</h2>
+ 
+  </div>
+  <div style="border-radius:10px;" class="transparent" padding>
+  <h3 style="color:#00b7ff;">Details</h3>
+  <p>Are you an educator, student, policymaker, game designer / developer or are you simply interested in the field of EdTech? These pre-conference workshops will provide highly engaging and interactive sessions full of insights, discussions and experiential learning!</p>
+
+  <h3 style="color:#00b7ff;">Speakers</h3>
+  <ion-item no-lines class="transparent3" *ngFor="let speaker of generateArray(xx.speakers)">
+    <ion-avatar item-start>
+     <img src="{{ speaker.imageurl }}">
+    </ion-avatar>
+    <h2>{{ speaker.name }}</h2>
+    <p style="color:#00b7ff;">{{ speaker.info }}</p>
+    
+
+ 
+  
+  </ion-item>
+
+  <h3 style="color:#00b7ff;">Resources</h3>
+    
+    <ion-item no-lines class="transparent3">
+      <p>Attachment 1</p>
+      
+      <button ion-button item-right small round>Download</button>
+
+    </ion-item>
+
+  
+
+</div>
+
+
+</ion-content>
