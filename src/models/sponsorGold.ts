@@ -93,6 +93,11 @@
   }
 
 
+  export interface Rules {
+    details: string;
+
+  }
+
   export interface Notification {
     title: any;
     body: any;

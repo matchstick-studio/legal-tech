@@ -85,7 +85,7 @@ export class ProfilePage {
     this.authProvider.getUserPic()
       .then(fname => {
 
-        this.pic = fname;
+        this.imgurl = fname;
       })
       .catch(error => {
         console.log('OOPS, error', error)

@@ -19,25 +19,27 @@
     <div >
         <ion-item style="background-color: transparent"  no-lines>
             <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Name</ion-label>
-            <ion-input style="color:#00b7ff;font-size: 110%;"  type="text"  value="{{ xx.name }}" ></ion-input>
         </ion-item>
+        <p padding style="color:#00b7ff;width:75%;font-size: 110%;margin-bottom: -20px;margin-top: -20px">{{ xx.name }}</p>
 
         <ion-item style="background-color: transparent"  no-lines>
             <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Position</ion-label>
-            <ion-input style="font-size: 100%;"  type="text"  value="{{xx.info}}" ></ion-input>
+            
         </ion-item>
+        <p padding style="font-size: 100%;width:75%;margin-bottom: -20px;margin-top: -20px">{{xx.info}}</p>
         <ion-item style="background-color: transparent"  no-lines>
             <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Company</ion-label>
-            <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.company }} " ></ion-input>
+         
         </ion-item>
+        <p padding style="font-size: 100%;width:75%;margin-bottom: -20px;margin-top: -20px">{{ xx.company }}</p>
   
     
         <br>
       </div>
 
 
-
-  <div style="border-radius:10px;" class="transparent" padding>
+  
+  <div *ngIf="xx.bio"  style="border-radius:10px;" class="transparent" padding>
     <h3 style="color:#00b7ff;">Bio</h3>
     <p>{{ xx.bio }}</p>
 

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar text-center>
-      <ion-title>Sponsor Details</ion-title>
+      <ion-title>Partner Details</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -25,29 +25,33 @@
 
       <ion-item style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Name</ion-label>
-          <ion-input style="color:#00b7ff;font-size: 110%;"  type="text"  value="{{ xx.info }}" ></ion-input>
+          
       </ion-item>
+      <p padding style="color:#00b7ff;font-size: 110%;margin-bottom: -20px;margin-top: -20px" >{{ xx.info }}</p>
 
       <ion-item text-wrap style="background-color: transparent"  no-lines>
-          <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> About</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{xx.description}}" ></ion-input>
+          <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> About</ion-label><br>
+          
       </ion-item>
+      <p padding style="font-size: 100%;margin-bottom: -20px;margin-top: -20px"  >{{xx.description}}</p>
       <ion-item *ngIf="xx.website"  style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Website</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.website }} " ></ion-input>
+          
       </ion-item>
+      <p padding style="font-size: 100%;margin-bottom: -20px;margin-top: -20px"  >{{ xx.website }} </p>
 
       <ion-item *ngIf="xx.phone"  style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Phone</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.phone }} " ></ion-input>
+         
       </ion-item>
+      <p padding style="font-size: 100%;margin-bottom: -20px;margin-top: -20px">{{ xx.phone }} </p>
 
 
       <ion-item *ngIf="xx.email"  style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Email</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.email }} " ></ion-input>
+          
       </ion-item>
-
+      <p padding style="font-size: 100%;margin-bottom: -20px;margin-top: -20px" >{{ xx.email }}</p>
   
       <br>
     </div>

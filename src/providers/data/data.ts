@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireDatabase } from 'angularfire2/database';
-import { GoldSponsor, SilverSponsor, PlatinumSponsor, Exhibitor, Wifi, Speaker, Social, About, Attendee, Schedule, Post, Notification } from '../../models/sponsorGold';
+import { GoldSponsor, SilverSponsor, PlatinumSponsor, Exhibitor, Wifi, Speaker, Social, About, Attendee, Schedule, Post, Notification, Rules } from '../../models/sponsorGold';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
@@ -50,6 +50,14 @@ export class DataProvider {
   public aboutListRef = this.db.list<About>('about');
 
   public postsListRef = this.db.list<Post>('posts');
+
+  public rulesListRef = this.db.list<Rules>('pitchrules');
+
+  public applyListRef = this.db.list<Rules>('pitchapply');
+
+  public guideListRef = this.db.list<Rules>('pitchguide');
+
+  ;
 
   public badger;
   
@@ -101,7 +109,9 @@ export class DataProvider {
 
   getTweetsList() {
     return this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23LegalTechConference19&src=typd&tweet_mode=extended', this.requestOptions).map(res => res);
-    
+    // return this.http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?q=%23LegalTechConference19&src=typd&tweet_mode=extended?screen_name=LegalTechUganda', this.requestOptions).map(res => res);
+
+     
 }
 
 
@@ -113,7 +123,17 @@ export class DataProvider {
 
 
   
-  
+getRulesList() {
+  return this.rulesListRef;
+}
+
+getApplyList() {
+  return this.applyListRef;
+}
+
+getGuideList() {
+  return this.guideListRef;
+}
 
 
   getPostsList() {

@@ -18,58 +18,29 @@
 
 
 
-  <!-- <ion-item style="background-color: transparent" no-lines>
 
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">Email</ion-label>       
-      <ion-input style="color:#00b7ff;font-size: 110%;" type="text" disabled="true" value="{{ this.authProvider.getEmail() }}"></ion-input>
-
-    </ion-item>
-
-    <ion-item style="background-color: transparent" (click)="edit1()" no-lines>
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">First Name</ion-label>
-      <ion-input style="color:#00b7ff;font-size: 110%;"  type="text"  value="{{ fname }}" formControlName="sname"></ion-input>
-    </ion-item>
-    
-    <ion-item style="background-color: transparent" (click)="edit2()" no-lines>
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">Last Name</ion-label>
-      <ion-input style="color:#00b7ff;font-size: 110%;" type="text"  value="{{ lname }}" formControlName="oname"></ion-input>
-    </ion-item>
-    
-    <ion-item style="background-color: transparent" no-lines>
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">Gender</ion-label>
-      <ion-input style="text-transform: capitalize;color:#00b7ff;font-size: 110%;" type="text" disabled="true" value="{{ gender | titlecase }}"></ion-input>
-    </ion-item>
-
-
-
-    <ion-item  style="background-color: transparent" (click)="edit3()" no-lines>
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">Company</ion-label>
-      <ion-input style="color:#00b7ff;font-size: 110%;" type="text" value="{{ company }}" formControlName="company"></ion-input>
-    </ion-item>
-    
-
-    <ion-item   style="background-color: transparent" (click)="edit4()" no-lines>
-      <ion-label style="color:#adaaaa;width:20%;font-size: 80%;">Position</ion-label>
-      <ion-input style="color:#00b7ff;font-size: 110%;" type="text" value="{{ position }}" formControlName="position"></ion-input>
-    </ion-item> -->
 
   <div >
       <ion-item style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Name</ion-label>
-          <ion-input style="color:#00b7ff;font-size: 110%;"  type="text"  value="{{ xx.firstName }} {{ xx.lastName }}" ></ion-input>
+
       </ion-item>
+      <p padding style="color:#00b7ff;font-size: 110%;width:75%;margin-bottom: -20px;margin-top: -20px">{{ xx.firstName }} {{ xx.lastName }}</p>
       <ion-item *ngIf="xx.gender" style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Gender</ion-label>
-          <ion-input style="font-size: 90%;"  type="text"  value="{{xx.gender | titlecase}}" ></ion-input>
+
       </ion-item>
+      <p padding style="font-size: 90%;width:75%;margin-bottom: -20px;margin-top: -20px">{{xx.gender | titlecase}}</p>
       <ion-item *ngIf="xx.position" style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Position</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{xx.position}}" ></ion-input>
+        
       </ion-item>
+      <p padding style="font-size: 100%;width:75%;margin-bottom: -20px;margin-top: -20px">{{xx.position}}</p>
       <ion-item *ngIf="xx.company" style="background-color: transparent"  no-lines>
           <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Company</ion-label>
-          <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.company }} " ></ion-input>
+     
       </ion-item>
+      <p padding style="font-size: 100%;width:75%;margin-bottom: -20px;margin-top: -20px" >{{ xx.company }}</p>
 
   
       <br>
@@ -78,12 +49,14 @@
     <div >
         <ion-item *ngIf="xx.email" style="background-color: transparent"  no-lines>
             <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Email</ion-label>
-            <ion-input style="font-size: 90%;"  type="text"  value="{{xx.email }}" ></ion-input>
+     
         </ion-item>
+        <p padding style="font-size: 90%;width:75%;margin-bottom: -20px;margin-top: -20px">{{xx.email }}</p>
         <ion-item *ngIf="xx.phone" style="background-color: transparent"  no-lines>
             <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Phone</ion-label>
-            <ion-input style="font-size: 90%;"  type="text"  value="{{xx.phone }}" ></ion-input>
+        
         </ion-item>
+        <p padding style="font-size: 90%;width:75%;margin-bottom: -20px;margin-top: -20px">{{xx.phone }}</p>
       
         <br>
       </div>
@@ -93,8 +66,9 @@
   
     <ion-item *ngIf="xx.website" style="background-color: transparent" no-lines>
       <ion-label style="color:#adaaaa;width:25%;">Website</ion-label>
-      <ion-input style="color:white;font-size: 90%;"  type="text" [disabled]="true" value="{{  xx.website }}" ></ion-input>
+      
     </ion-item>
+    <p padding style="color:white;font-size: 90%;width:75%;margin-bottom: -20px;margin-top: -20px">{{  xx.website }}</p>
 
 
 

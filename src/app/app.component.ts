@@ -195,7 +195,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'Speakers', component: 'SpeakersPage', icon: "people" },
-      { title: 'Sponsors', component: 'SponsorsPage', icon: "ionic" },
+      { title: 'Partners', component: 'SponsorsPage', icon: "ionic" },
  
       { title: 'Delegates', component: 'AttendeesPage', icon: 'ios-people' },
       { title: 'WiFi Information', component: 'WifiPage', icon: 'wifi' },
