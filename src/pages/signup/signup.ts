@@ -33,6 +33,7 @@ export class SignupPage {
 		private auth: AuthProvider,
 		public toastCtrl: ToastController,
 		public imagePicker: ImagePicker,
+		public cropService: Crop,
 		fcm: FcmProvider,
 		
 	) {
@@ -135,7 +136,7 @@ openImagePicker(){
 			  }).then(
 				(results) => {
 				  for (var i = 0; i < results.length; i++) {
-					Crop.crop(results[i], {quality: 75}).then(
+					this.cropService.crop(results[i], {quality: 75}).then(
 					  newImage => {
 						this.uploadImageToFirebase(newImage);
 					  },

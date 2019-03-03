@@ -29,7 +29,8 @@ import { tap } from 'rxjs/operators';
     </ion-header>
 
     <ion-content>
-      <ion-list no-lines>
+      <ion-list no-lines style="padding-top:20px; ">
+   
         <ion-item style="background-color: rgba(0, 0, 0, 0);" *ngFor="let p of pages" menuClose (click)="openPage(p)">
           <ion-icon [name]="p.icon" item-left></ion-icon>
           {{ p.title }}
@@ -195,9 +196,11 @@ export class MyApp {
     this.pages = [
       { title: 'Speakers', component: 'SpeakersPage', icon: "people" },
       { title: 'Sponsors', component: 'SponsorsPage', icon: "ionic" },
-      { title: 'Exhibitors', component: 'ExhibitorsPage', icon: 'albums' },
+ 
       { title: 'Delegates', component: 'AttendeesPage', icon: 'ios-people' },
       { title: 'WiFi Information', component: 'WifiPage', icon: 'wifi' },
+
+      { title: 'Pitch Competition', component: 'ExhibitorsDetailsPage', icon: 'trophy' },
 
     ]
 

@@ -7,6 +7,17 @@ page-exhibitors-details {
       
       }
 
+      h1{
+        color:white;
+      }
+  
+      .listStyle {
+        color: #049cd8;
+    } 
+    .listStyle p {
+        color: white;
+    }
+
       #jj img{
         height: 120px;
       } 
@@ -19,8 +30,12 @@ page-exhibitors-details {
 
 
       .transparent{
-        background-color: rgba(0, 0, 0, 0.61);
+    
     }
+    .my-modal-list {
+      list-style-type: disc;
+      padding: 20px;
+  }
 
     .transparent2{
         background-color: rgba(0, 37, 63,0.3);

@@ -15,7 +15,7 @@ import {DomSanitizer } from '@angular/platform-browser';
 export class HomePage {
 
   cardItems: any[];
-  abc: string = "feed";
+  abc: string = "social";
 
   fname = "0";
   lname;

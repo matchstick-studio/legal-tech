@@ -26,32 +26,20 @@ export class SponsorsPage {
   // picS;
   constructor(public navCtrl: NavController, public navParams: NavParams, private goldSponsorList: DataProvider) {
 
-    this.gold = this.goldSponsorList.getGoldSponsorList()
-    .snapshotChanges()
-    .map(
-    changes => {
-      return changes.map(c => ({
-        key: c.payload.key, ...c.payload.val()
-      }))
-    });
+
 
     this.platinum = this.goldSponsorList.getPlatinumSponsorList()
     .snapshotChanges()
     .map(
     changes => {
+      
       return changes.map(c => ({
         key: c.payload.key, ...c.payload.val()
+
       }))
     });
 
-    this.silver = this.goldSponsorList.getSilverSponsorList()
-    .snapshotChanges()
-    .map(
-    changes => {
-      return changes.map(c => ({
-        key: c.payload.key, ...c.payload.val()
-      }))
-    });
+   
    
 
     

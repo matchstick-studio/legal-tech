@@ -10,7 +10,7 @@
 
 	<ion-item style="background-color: transparent">
 		<!-- <button ion-button (click)="openImagePicker()">Select Photo</button> -->
-		 <ion-avatar id="jj" (click)="openImagePicker()">
+		 <ion-avatar id="jj" (click)="openImagePickerCrop()">
          <img [src]="imgurl">
 
       </ion-avatar>
@@ -43,13 +43,13 @@
 				<ion-col col-6>
 				<ion-item style="background-color: transparent" no-lines  >
 				<ion-label>Male</ion-label>
-				<ion-radio value="male" ></ion-radio>
+				<ion-radio value="Male" ></ion-radio>
 				</ion-item>
 			</ion-col>
 				<ion-col col-6>
 				<ion-item style="background-color: transparent" no-lines >
 				<ion-label>Female</ion-label>
-				<ion-radio value="female" ></ion-radio>
+				<ion-radio value="Female" ></ion-radio>
 				</ion-item>
 			</ion-col>
 		</ion-row>

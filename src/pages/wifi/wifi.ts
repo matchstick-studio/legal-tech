@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
+import { DataProvider } from '../../providers/data/data';
+
+
 
 /**
  * Generated class for the WifiPage page.
@@ -14,14 +17,37 @@ import { TabsPage } from '../tabs/tabs';
   selector: 'page-wifi',
   templateUrl: 'wifi.html',
 })
-export class WifiPage {
+export class WifiPage{
 
-  
+  wf;
   
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public app:App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public app:App,private goldSponsorList: DataProvider) {
+   
+
+
+
+
+    this.wf = this.goldSponsorList.getWifiList()
+    .snapshotChanges()
+    .map(
+    changes => {
+      return changes.map(c => ({
+        key: c.payload.key, ...c.payload.val()
+      }))
+    });
+  
+
+
+    // console.log(this.wf);
+
+    console.log("fail");
+  
+
+
   }
 
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WifiPage');
   }

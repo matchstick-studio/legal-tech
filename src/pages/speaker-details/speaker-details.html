@@ -9,20 +9,37 @@
 
 <ion-content  padding>
 
-  <ion-avatar id="jj">
-    <img src="{{ xx.imageurl }}">
+<div class="xxx">
+      <ion-avatar>
+          <img src="{{ xx.imageurl }}">
+      </ion-avatar>
+    </div>
+     
 
-  </ion-avatar>
+    <div >
+        <ion-item style="background-color: transparent"  no-lines>
+            <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Name</ion-label>
+            <ion-input style="color:#00b7ff;font-size: 110%;"  type="text"  value="{{ xx.name }}" ></ion-input>
+        </ion-item>
+
+        <ion-item style="background-color: transparent"  no-lines>
+            <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Position</ion-label>
+            <ion-input style="font-size: 100%;"  type="text"  value="{{xx.info}}" ></ion-input>
+        </ion-item>
+        <ion-item style="background-color: transparent"  no-lines>
+            <ion-label style="color:#adaaaa;width:20%;font-size: 80%;"> Company</ion-label>
+            <ion-input style="font-size: 100%;"  type="text"  value="{{ xx.company }} " ></ion-input>
+        </ion-item>
+  
+    
+        <br>
+      </div>
 
 
-  <div text-center padding>
-    <h2>{{ xx.name }}</h2>
-    <p>{{ xx.company }}</p>
-    <br>
-  </div>
+
   <div style="border-radius:10px;" class="transparent" padding>
-    <h3 style="color:#00b7ff;">About</h3>
-    <p>{{xx.info}}</p>
+    <h3 style="color:#00b7ff;">Bio</h3>
+    <p>{{ xx.bio }}</p>
 
     <br>
 

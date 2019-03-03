@@ -15,10 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ExhibitorsDetailsPage {
 
-  xx;
+ 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.xx = navParams.get('exhibitor');
+  
   
  
   }

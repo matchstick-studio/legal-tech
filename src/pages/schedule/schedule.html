@@ -21,23 +21,25 @@
   <ion-item-group>
 
 
-    <ion-item no-lines *ngFor="let s of schedule | async ; let i = index;" class="transparent" [ngClass]="(i % 2 == 0) ? 'odd' : 'even'" (click)="openItem(s,'ScheduleDetailsPage')">
+    <ion-item text-wrap no-lines *ngFor="let s of schedule | async ; let i = index;" class="transparent" [ngClass]="(i % 2 == 0) ? 'odd' : 'even'" (click)="openItem(s,'ScheduleDetailsPage')">
 
       <h2 style="color:#00b7ff;font-size:150%;"><ion-icon name="time"></ion-icon> {{ s.time }}</h2>
       <div >
       <h2 style="padding-left:12%;">{{ s.title }}</h2>
+      <div *ngIf="s.speakers" >
       <div style="padding-left:10%;" class="faces">
         
        
        
 
-          <ion-avatar *ngFor="let ss of  generateArray(s.speakers)">
-              <img src="{{ ss.imageurl }}">
+          <ion-avatar  *ngFor="let ss of  generateArray(s.speakers)">
+              <img  src="{{ ss.imageurl }}">
           </ion-avatar>
           
         
 
       </div>
+    </div>
     </div>
     </ion-item>
 

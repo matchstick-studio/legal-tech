@@ -8,13 +8,17 @@ page-about {
       }
 
       .transparent{
-        background-color: #049cd8ef;
+        
         padding: 10px;
+        font-size: 110%;
     }
 
     .transparent2{
         background-color: rgba(0, 37, 63,0.3);
         color: white;
+    }
+    h1{
+      color:#049cd8;
     }
 
     #jj img{
@@ -24,7 +28,7 @@ page-about {
       #jj {
         width: 40%;
         margin-left:30%;
-        // height: 100px;
+       
       } 
 
 }

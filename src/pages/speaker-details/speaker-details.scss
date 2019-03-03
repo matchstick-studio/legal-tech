@@ -15,8 +15,10 @@ page-speaker-details {
       
       }
 
-      #jj img{
+       img{
         height: 120px;
+        border-radius: 50%;
+    
       } 
 
       #jj {
@@ -32,11 +34,13 @@ page-speaker-details {
       }
 
       .transparent{
-        background-color: #00b7ff60;
+     
     }
     .xxx{
       
       color: white;
+      width: 35%;
+   
     }
 
     .transparent2{

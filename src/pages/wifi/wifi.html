@@ -7,17 +7,27 @@
 <ion-header>
 
   <ion-navbar text-center> 
-    <ion-title>WiFi Information</ion-title>
+    <ion-title>WiFi</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content  padding>
-<P (click)="a()">
-  Network: Matchstick
+<div *ngFor="let s of wf | async ">
+<P  >
+  <!-- Network: {{wf.username | async }} -->  Network Name: <span style="color:#00b7ff;">{{s.username  }}</span>
+
+
+  
+
 </P>
+
 <P>
-    Password: lifestyle427
+
+    Password: <span style="color:#00b7ff;">{{s.password  }}</span>
+
   </P>
+
+</div>
 </ion-content>

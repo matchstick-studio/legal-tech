@@ -33,7 +33,7 @@ export class ProfilePage {
   linkedin;
   gender;
   form: FormGroup;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public authProvider: AuthProvider, public toastCtrl: ToastController, public imagePicker: ImagePicker, fb: FormBuilder) {
+  constructor(public cropService: Crop,public navCtrl: NavController, public navParams: NavParams, public authProvider: AuthProvider, public toastCtrl: ToastController, public imagePicker: ImagePicker, fb: FormBuilder) {
     this.authProvider.getUserFirstName()
       .then(fname => {
 
@@ -291,7 +291,7 @@ export class ProfilePage {
 			  }).then(
 				(results) => {
 				  for (var i = 0; i < results.length; i++) {
-					Crop.crop(results[i], {quality: 75}).then(
+					this.cropService.crop(results[i], {quality: 75}).then(
 					  newImage => {
 						this.uploadImageToFirebase(newImage);
 					  },

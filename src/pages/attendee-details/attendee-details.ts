@@ -57,6 +57,8 @@ export class AttendeeDetailsPage {
 
   }
 
+
+
   first(a: any) {
     a.toString();
     return a.charAt(0)

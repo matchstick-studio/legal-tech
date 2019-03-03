@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FcmProvider } from '../providers/fcm/fcm';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { Firebase } from '@ionic-native/firebase';
+import { Crop } from '@ionic-native/crop';
+
 // import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 
@@ -65,7 +67,8 @@ firebase.initializeApp(firebaseConfig);
     LoginPageModule,
     NgxErrorsModule ,
     HttpClientModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+  
     
     // SearchPipe.forRoot()
   ],
@@ -90,6 +93,8 @@ firebase.initializeApp(firebaseConfig);
 
     FcmProvider,
     Firebase,
+    Crop,
+  
     // FCM
     
   ]
