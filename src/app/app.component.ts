@@ -250,16 +250,30 @@ export class MyApp {
           let messageText: string;
           if (this.platform.is('android')) {
             messageText = msg.body;
+            
           }
 
           if (this.platform.is('ios')) {
             messageText = msg.aps.alert;
           }
-          const toast = this.toastCtrl.create({
-            message: messageText,
-            duration: 3000
-          });
-          toast.present();
+
+          let alert = this.alertCtrl.create({
+                    title: msg.title,
+                    message: messageText,
+                    buttons: [
+                      {
+                        text: 'Done',
+                        role: 'cancel'
+                      }
+                    ]
+                  });
+          
+                  alert.present();
+          // const toast = this.toastCtrl.create({
+          //   message: messageText,
+          //   duration: 3000
+          // });
+          // toast.present();
         })
       )
         .subscribe()
