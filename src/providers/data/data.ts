@@ -108,7 +108,7 @@ export class DataProvider {
   }
 
   getTweetsList() {
-    return this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23LegalTechConference19&src=typd&tweet_mode=extended&result_type=popular&include_entities=true&count=100', this.requestOptions).map(res => res);
+    return this.http.get('https://api.twitter.com/1.1/search/tweets.json?q=%23LegalTechConference19&src=typd&tweet_mode=extended&count=100', this.requestOptions).map(res => res);
     // return this.http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?q=%23LegalTechConference19&src=typd&tweet_mode=extended?screen_name=LegalTechUganda', this.requestOptions).map(res => res);
 
      
