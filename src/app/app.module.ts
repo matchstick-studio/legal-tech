@@ -47,8 +47,7 @@ firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [
-    MyApp,
-    SignupPage
+    MyApp
   ],
   imports: [
     BrowserModule,
