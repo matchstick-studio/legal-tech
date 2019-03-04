@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, normalizeURL } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, normalizeURL, AlertController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -29,11 +29,12 @@ export class ProfilePage {
   initials;
   phone;
   fb;
+  fbk;
   twitter;
   linkedin;
   gender;
   form: FormGroup;
-  constructor(public cropService: Crop,public navCtrl: NavController, public navParams: NavParams, public authProvider: AuthProvider, public toastCtrl: ToastController, public imagePicker: ImagePicker, fb: FormBuilder) {
+  constructor(public alertCtrl:AlertController,public cropService: Crop,public navCtrl: NavController, public navParams: NavParams, public authProvider: AuthProvider, public toastCtrl: ToastController, public imagePicker: ImagePicker, fb: FormBuilder) {
     this.authProvider.getUserFirstName()
       .then(fname => {
 
@@ -104,7 +105,7 @@ export class ProfilePage {
     this.authProvider.getFb()
       .then(fname => {
 
-        this.fb = fname;
+        this.fbk = fname;
       })
       .catch(error => {
         console.log('OOPS, error', error)
@@ -185,7 +186,7 @@ export class ProfilePage {
       company: data.company,
       phone: data.phone,
       website: data.website,
-      facebook: data.facebook,
+      facebook: this.fb,
       twitter: data.twitter,
       linkedin: data.linkedin,
       position: data.position,
@@ -285,6 +286,34 @@ export class ProfilePage {
       });
   }
 
+  addsocial(){
+    let alert = this.alertCtrl.create({
+      title: "Facebook link",
+      message: "Visit a your facebook profile and paste your url here",
+      inputs: [
+        {
+          name: 'facebook',
+          placeholder: 'Facebook Profile URL',
+          value: this.fbk
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Done',
+          role: 'cancel',
+          handler: data => {
+            this.fbk = data.facebook;
+          }
+        }
+      ]
+    });
+
+    alert.present();
+  }
 
   	openImagePickerCrop(){
 		this.imagePicker.hasReadPermission().then(

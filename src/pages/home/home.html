@@ -24,13 +24,30 @@
         <ion-card-content>
           <p>{{item.full_text}}</p>
         </ion-card-content>
+
+        <div *ngIf="item.entities.media">
+            <div *ngFor="let i of item.entities.media">
+
+        <img src="{{ i.media_url }}">
+
+      </div>
+      </div>
        
         <ion-row>
        
           <ion-col>
             <button ion-button color="primary" clear small icon-start>
               <ion-icon name="repeat"></ion-icon>
-              {{item.retweet_count}} Retweets
+<div>
+              {{item.retweet_count}} 
+
+            </div>
+              <div *ngIf="item.retweet_count==1">
+              Retweet
+            </div>
+            <div *ngIf="item.retweet_count!=1">
+              Retweets
+            </div>
               </button>
           </ion-col>
           <!-- <ion-col>
