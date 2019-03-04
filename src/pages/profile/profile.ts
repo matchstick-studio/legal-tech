@@ -188,7 +188,8 @@ export class ProfilePage {
       facebook: data.facebook,
       twitter: data.twitter,
       linkedin: data.linkedin,
-      position: data.position
+      position: data.position,
+      imageurl: this.imgurl,
 
     };
     this.authProvider.profileUpdate(credentials);
@@ -201,7 +202,14 @@ export class ProfilePage {
     this.isEditable7 = false;
     this.isEditable8 = false;
 
+    
     this.ionViewDidLoad();
+
+    let toast = this.toastCtrl.create({
+      message: 'Profile Info Updated',
+      duration: 3000
+    });
+    toast.present();
 
   }
 

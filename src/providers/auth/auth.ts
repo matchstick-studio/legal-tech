@@ -169,6 +169,7 @@ newNotification(data){
       twitter: credentials.twitter,
       linkedin: credentials.linkedin,
       position: credentials.position,
+      imageurl: credentials.imageurl,
 
 
    
